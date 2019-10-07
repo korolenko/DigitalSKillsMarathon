@@ -1,13 +1,10 @@
 package com.company.Task4;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SberCorporateCulture{
-    private static final String result = "Миссия и ценности\n" +
+    private static final String RESULT = "Миссия и ценности\n" +
             "\n" +
             "Миссия банка:\n" +
             "\n" +
@@ -48,7 +45,7 @@ public class SberCorporateCulture{
 
         //обработка незначительных опечаток, отсутствие влияние регистра и принятие производных от Сбер как валидный вопрос
         if (request.toLowerCase().matches("перечисли.*ценностисбер.*")){
-            System.out.println(result);
+            System.out.println(RESULT);
         }
         else {
             throw new InputMismatchException("Вы задали непонятный вопрос, пожалуйста, перефразируйте");
